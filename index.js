@@ -42,7 +42,6 @@ app.get('/author', (req, res) => {
     res.status(200).json({
         data: {
             senghong: "67fb1f9b0dd6a3e292e1fa4c9752d1af3f1ea0a787ca95f698f5b8883af5d40d",
-            vannak: "67fb1f9b0dd6a3e292e1fa4c9752d1af3f1ea0a787ca95f698f5b8883af5d40d",
             sopha: "38c77aaeb9d5e0dfcaf99627a74e70949b3e668ad2fed73a1845bd6ac7ae7f22"
         }
     })
