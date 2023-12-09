@@ -48,6 +48,14 @@ app.get('/author', (req, res) => {
     })
 })
 
+app.get('/env', (req, res) => {
+    axios.get('https://api.qase.io/v1/environment/RPP?limit=10&offset=0', {
+        headers: {
+            Token: Token
+        }
+    }).then((response) => { res.json({ data: response.data }) }).catch((err) => { res.send(err) });
+})
+
 app.listen(3000, () => {
     console.log(`http://localhost:3000`);
 })
