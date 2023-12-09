@@ -22,9 +22,7 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/add', (req, res) => {
-
     const { title, plan_id, environment_id, token } = req.body;
-
     axios.post('https://api.qase.io/v1/run/RPP', { title, plan_id, environment_id }, {
         headers: {
             Token: token
@@ -39,6 +37,17 @@ app.post('/add', (req, res) => {
             res.status(500).send('Error');
         });
 })
+
+app.get('/author', (req, res) => {
+    res.status(200).json({
+        data: {
+            senghong: "67fb1f9b0dd6a3e292e1fa4c9752d1af3f1ea0a787ca95f698f5b8883af5d40d",
+            vannak: "67fb1f9b0dd6a3e292e1fa4c9752d1af3f1ea0a787ca95f698f5b8883af5d40d",
+            sopha: "38c77aaeb9d5e0dfcaf99627a74e70949b3e668ad2fed73a1845bd6ac7ae7f22"
+        }
+    })
+})
+
 app.listen(3000, () => {
     console.log(`http://localhost:3000`);
 })
