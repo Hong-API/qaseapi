@@ -1,4 +1,5 @@
 const express = require('express');
+const serverless = require('serverless-http');
 const axios = require('axios');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -54,6 +55,7 @@ app.get('/env', (req, res) => {
     }).then((response) => { res.json({ data: response.data }) }).catch((err) => { res.send(err) });
 })
 
+module.exports.handler = serverless(app);
 app.listen(3000, () => {
     console.log(`http://localhost:3000`);
 })
