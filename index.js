@@ -47,7 +47,7 @@ app.get('/author', (req, res) => {
             Boeuros: "",
             Saven: "",
             Darany: "",
-            Theany:"",
+            Theany: "",
             Narong: "",
         }
     })
